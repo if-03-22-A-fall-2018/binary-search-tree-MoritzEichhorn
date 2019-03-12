@@ -123,7 +123,7 @@ int traverse_pre_order(Bst bst, int *elements, int start) {
   if(bst->left == 0 && bst->right == 0) { return 1; }
 
   start += traverse_pre_order(bst->left, elements, start+1);
-  return start + traverse_pre_order(bst->right, elements, start+1);
+  return traverse_pre_order(bst->right, elements, start+1);
 }
 
 /**
